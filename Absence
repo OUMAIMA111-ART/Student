@@ -1,0 +1,38 @@
+package casestudy;
+
+import java.time.LocalDate;
+
+public class Absence {
+	public LocalDate dateabsece;
+	public boolean justification;
+
+	
+
+	public LocalDate getDateabsece() {
+		return dateabsece;
+	}
+
+	public void setDateabsece(LocalDate dateabsece) {
+		this.dateabsece = dateabsece;
+	}
+
+	public boolean isJustification() {
+		return justification;
+	}
+
+	public void setJustification(boolean justification) {
+		this.justification = justification;
+	}
+
+	public Absence(LocalDate dateabsece, boolean justification) {
+		// TODO Auto-generated constructor stub
+		this.dateabsece=dateabsece;
+		this.justification=justification;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
