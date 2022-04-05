@@ -1,0 +1,42 @@
+package casestudy;
+
+public class personne implements Trackable{
+	public static String firstName;
+	public String lastName;
+	public String school;
+	public static int authorizedAbsence;
+	
+	
+	public static String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	public String getSchool() {
+		return school;
+	}
+	public void setSchool(String school) {
+		this.school = school;
+	}
+	public personne(String firstName, String lastName, String school) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.school = school;
+	}
+	public int trackSituation(int x) {
+		return x;
+		
+	}
+	public void display() {
+		
+	}
+
+}
