@@ -1,0 +1,46 @@
+package casestudy;
+
+public class Professor extends personne{
+	public int tracksituation;
+	public int objectif;
+	public String speciality;
+	
+	
+	public int getTracksituation() {
+		return tracksituation;
+	}
+
+	public void setTracksituation(int tracksituation) {
+		this.tracksituation = tracksituation;
+	}
+
+	public int getObjectif() {
+		return objectif;
+	}
+
+	public void setObjectif(int objectif) {
+		this.objectif = objectif;
+	}
+
+	public String getSpeciality() {
+		return speciality;
+	}
+
+	public void setSpeciality(String speciality) {
+		this.speciality = speciality;
+	}
+
+	public Professor(String firstName, String lastName, int tracksituation, int objectif, String speciality, String school) {
+		// TODO Auto-generated constructor stub
+		super(firstName, lastName, school);
+		this.tracksituation=tracksituation;
+		this.objectif=objectif;
+		this.speciality=speciality;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
