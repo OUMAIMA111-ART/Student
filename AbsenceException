@@ -1,0 +1,17 @@
+package casestudy;
+
+public class AbsenceException extends Exception{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	public AbsenceException() {
+		// TODO Auto-generated constructor stub
+	}
+	public String toSting() {
+		return "Motif non renseigné";
+	}
+
+}
