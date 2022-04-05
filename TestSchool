@@ -1,0 +1,48 @@
+package casestudy;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+
+public class TestSchool {
+
+	public TestSchool() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Students S1 =new Students("A", "Youssef","Data Truc",'A', new ArrayList<Absence>());
+		Students S2 =new Students("A", "Mohammed","Data Truc", 'B', new ArrayList<Absence>());
+		Students S3 =new Students("A", "Mouna","Data Truc" , 'A', new ArrayList<Absence>());
+		//
+		Professor P= new Professor("A", "Imane", 32, 80, "DataTruc", "communication");
+		Professor P1= new Professor("B", "Ahmed", 12, 60, "DataTruc", "computer science");
+		//
+		S1.addAbsence(new Absence(LocalDate.of(2018, 12, 03), false));
+		S1.addAbsence(new Absence(LocalDate.of(2018, 11, 28), false));
+		Absence A3= new Absence(LocalDate.of(2018, 11, 26), false);
+		S3.addAbsence(A3);
+		
+		//
+		try {
+			S3.justify(A3, "Participation à une journée sportive");
+		} catch (AbsenceException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		Students[] L1= {S1, S2, S3};
+		String student= null;
+			int maxAbsence=0;
+			String studentname = null;
+		for(Students std:L1) {
+			if(maxAbsence< Students.getAllAbsence().size()) {
+				maxAbsence = Students.getAllAbsence().size();
+				studentname= Students.getFirstName();
+			}
+		}
+		System.out.print(studentname);
+		
+	}
+
+}
