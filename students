@@ -1,0 +1,59 @@
+package casestudy;
+
+
+import java.util.ArrayList;
+
+public class Students extends personne{
+	public char groupe;
+	static ArrayList<Absence> allAbsence= new ArrayList<Absence>();
+	
+	
+	
+	public char getGroupe() {
+		return groupe;
+	}
+	public void setGroupe(char groupe) {
+		this.groupe = groupe;
+	}
+	public static ArrayList<Absence> getAllAbsence() {
+		return allAbsence;
+	}
+	public void setAllAbsence(ArrayList<Absence> allAbsence) {
+		this.allAbsence = allAbsence;
+	}
+	public Students(String firstName, String lastName, String school, char groupe, ArrayList<Absence> allAbsence) {
+		super(firstName, lastName, school);
+		this.firstName=firstName;
+		this.groupe = groupe;
+		this.allAbsence = allAbsence;
+	}
+	public boolean justify(Absence a, String reason) throws AbsenceException{
+		if(reason=="") {
+			throw new AbsenceException();
+		}else {
+			a.setJustification(true);
+			return true;
+		}
+		
+		
+	}
+	public int tracksituation() {
+		return groupe;
+		
+	}
+	public void addAbsence(Absence x) {
+		this.allAbsence.add(x);
+		
+	}
+	public void display() {
+		for(Object x:allAbsence) {
+			System.out.print(x);
+		}
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
